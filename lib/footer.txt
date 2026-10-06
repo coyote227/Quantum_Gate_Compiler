@@ -1,5 +1,3 @@
-
-
 ;footerbelow
 
 go=2 ph31
