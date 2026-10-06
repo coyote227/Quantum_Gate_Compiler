@@ -23,6 +23,7 @@ p31:gp2
 
 ;not on first qbit
 (p4 pl1 ph3):f1 ;180 deg y-pulse on 1h
+
 ;cnot12 control bit 1
 ; quant-ph/9801027 - Jones and Mosca (eqn 14)
 ; H is spin I and C is spin S
@@ -33,6 +34,7 @@ d2
 (p1 pl2 ph0):f2 ; 90Ix (1H)
 (p1 pl2 ph3):f2 (p11 pl1 ph3):f1 ;90Yb on spin I,S (1H, 13C)
 (p11 pl1 ph0):f1 ; 90Sx (13C)
+
 
 
 ;footerbelow

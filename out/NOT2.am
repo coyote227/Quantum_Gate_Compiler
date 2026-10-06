@@ -25,6 +25,7 @@ p31:gp2
 (p14 pl2 ph1):f2 ;180 deg y-pulse on 13C
 
 
+
 ;footerbelow
 
 go=2 ph31

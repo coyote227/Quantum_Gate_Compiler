@@ -26,6 +26,7 @@ p31:gp2
 (p4 pl1 ph0):f1 (p14 pl2 ph0):f2 ; 180x on 1H and 13C
 
 
+
 ;footerbelow
 
 go=2 ph31
