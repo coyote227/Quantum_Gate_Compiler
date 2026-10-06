@@ -1,0 +1,32 @@
+#include <Avance.incl>
+#include <Grad.incl>
+
+;#define PPS
+;#define NOT1
+;#define NOT2
+;#define NOT12
+;#define HAD
+;#define PHAD
+;#define CNOT12
+;#define CNOTB12
+;#define CNOT21
+;#define CNOTB21
+;#define OBSPOP
+;#define INIT
+
+"acqt0=-p1*2/3.1416"
+"d2=1/(4*cnst1)" ; 1/4J free evolution
+
+
+1 ze
+2 30m
+  d1
+
+(p2 pl1 ph0):f1  ;15 deg x-pulse on 1H
+d2
+d2
+(p3 pl1 ph3):f1  ;75 deg ybar-pulse on 1H
+
+100u UNBLKGRAD ; gradient
+p31:gp2
+1000u BLKGRAD
