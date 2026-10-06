@@ -21,6 +21,7 @@ p31:gp2
 
 ;headerend
 
+;pseudo hadamard
 (p1 pl1 ph3):f1 (p11 pl2 ph3):f2 ; 90y-bar on 1H and 13C
 
 
