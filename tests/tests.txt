@@ -1,27 +1,34 @@
-[XYZ]
-[NOT1,XYZ]
-[CNOT12,XYZ]
-[]
-[cnot12]
-[not12]
-[CNOT12]
-[CNOT21]
-[CNOTB12]
-[CNOTB21]
-[HAD]
-[NOT1]
-[NOT12]
-[NOT2]
-[PHAD]
-[]
-[]
-[]
-[]
-[]
-[]
-[]
-[]
-[]
-[]
-[]
-[]
+[XYZ] // Unknown gate
+[NOT1,XYZ] // Valid gate followed by unknown gate
+[CNOT12,XYZ] // Valid 2-qubit gate followed by unknown
+[] // Empty input (no gate)
+[cnot12] // Lowercase gate name
+[not12] // Lowercase gate name
+[CNOT12] // Single CNOT12
+[CNOT21] // Single CNOT21
+[CNOTB12] // Single CNOTB12
+[CNOTB21] // Single CNOTB21
+[HAD] // Single HAD
+[NOT1] // Single NOT1
+[NOT12] // Single NOT12
+[NOT2] // Single NOT2
+[PHAD] // Single PHAD
+
+// Edge Cases from Proposal
+[NOT1, CNOT12] // Edge Case 1: Reversed order 1
+[CNOT12, NOT1] // Edge Case 1: Reversed order 2
+[CNOT12, NOT1, CNOT12] // Edge Case 2: Repeated gates
+[CNOTB12] // Edge Case 3: Near-identical block comparison
+
+// More Mixed Gate Sequences
+[NOT1, CNOT12, HAD, NOT2, CNOTB21, NOT1] // Basic Case 6: Mixed gate signals
+[HAD, PHAD, NOT12, CNOT21] // Mixed sequence 1
+[NOT2, CNOTB12, HAD, NOT1] // Mixed sequence 2
+[CNOT12, CNOT21, CNOTB12, CNOTB21] // All CNOTs combined
+[PHAD, NOT1, NOT2, HAD, NOT12] // Mixed basic gates
+
+// Format & Syntax Edge Cases
+[NOT1, , CNOT12] // Gate, , gate (Extra commas and spaces)
+[CNOT 12] // Halfgatename space otherhalf (Space inside gate name)
+[NOT 12] // Halfgatename space otherhalf (Space inside gate name)
+[ ] // No gate (with space inside brackets)
