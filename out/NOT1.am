@@ -21,3 +21,11 @@ p31:gp2
 
 ;headerend
 
+(p4 pl1 ph3):f1 ;180 deg y-pulse on 1h
+
+
+;footerbelow
+
+go=2 ph31
+30m mc #0 to 2 F0(zd)
+exit

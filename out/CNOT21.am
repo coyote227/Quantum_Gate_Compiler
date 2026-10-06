@@ -1,0 +1,40 @@
+#include <Avance.incl>
+#include <Grad.incl>
+
+"acqt0=-p1*2/3.1416"
+"d2=1/(4*cnst1)" ; 1/4J free evolution
+
+1 ze
+2 30m
+  d1
+
+;pps 
+
+(p2 pl1 ph0):f1  ;15 deg x-pulse on 1H
+d2
+d2
+(p3 pl1 ph3):f1  ;75 deg ybar-pulse on 1H
+
+100u UNBLKGRAD ; gradient
+p31:gp2
+1000u BLKGRAD
+
+;headerend
+
+;cnot21 with control-bit state 1
+; quant-ph/9801027 - Jones and Mosca (eqn 14)
+; H is spin I and C is spin S
+(p1 pl2 ph1):f2 ; 90Iy (1H)
+d2
+d2
+(p11 pl1 ph1):f1 ; 90Sy (13C)
+(p11 pl1 ph0):f1 ;90Sx (13C)
+(p1 pl2 ph3):f2 (p11 pl1 ph3):f1 ;90Iyb (1H) 90Syb (13C)
+(p1 pl2 ph0):f2 ; 90Ix (1H)
+
+
+;footerbelow
+
+go=2 ph31
+30m mc #0 to 2 F0(zd)
+exit

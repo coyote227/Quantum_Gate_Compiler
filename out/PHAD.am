@@ -21,3 +21,11 @@ p31:gp2
 
 ;headerend
 
+(p1 pl1 ph3):f1 (p11 pl2 ph3):f2 ; 90y-bar on 1H and 13C
+
+
+;footerbelow
+
+go=2 ph31
+30m mc #0 to 2 F0(zd)
+exit

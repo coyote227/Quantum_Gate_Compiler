@@ -1,3 +1,7 @@
+
+
+;footerbelow
+
 go=2 ph31
 30m mc #0 to 2 F0(zd)
 exit
