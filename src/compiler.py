@@ -63,7 +63,7 @@ def build_program(gates, blocks, header, footer):
         program += "\n"
 
     for gate in gates:
-        program += blocks[gate]
+        program += blocks[gate].strip() + "\n\n"
 
         if not blocks[gate].endswith("\n"):
             program += "\n"
